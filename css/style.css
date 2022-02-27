@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 1.75rem; }
+
+body {
+  font-family: "lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #777; }
+
+.header-primary {
+  color: #fff;
+  text-transform: uppercase; }
+  .header-primary--main {
+    display: block;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7; }
+  .header-primary--sub {
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 0.92rem;
+    font-weight: 700; }
+
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: transform 0.15s; }
+  .heading-secondary:hover {
+    transform: skew(3deg, 3deg);
+    transform-origin: center center;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777; }
+
+.paragraph {
+  font-size: 1rem;
+  color: #b3b3b3; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 7rem; }
+
+.u-display-flex {
+  display: flex; }
+
+.u-width-50per {
+  flex-basis: 50%; }
+
+.u-padding-inline-6 {
+  padding-inline: 6rem; }
+
+.u-gap-big {
+  gap: 5rem; }
+
+.u-gap-regular {
+  gap: 3rem; }
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 1.75rem;
+  margin-top: 2.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  font-size: 1rem;
+  position: relative; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5, 1.8);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  font-size: 1.25rem;
+  transition: all 0.3s; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); }
+
+.btn-text:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
+  -ms-perspective: 150rem;
+  position: relative;
+  flex: 1;
+  min-height: 60vh; }
+  .card__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.7s ease-out;
+    backface-visibility: hidden;
+    border-radius: 5px; }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(135deg, #ffb900, #ff7730); }
+      .card__side--back--2 {
+        background-image: linear-gradient(135deg, #7ed56f, #28b485); }
+      .card__side--back--3 {
+        background-image: linear-gradient(135deg, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(360deg); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transition: all 0.2s; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 3rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 8rem; }
+    .composition__photo:hover {
+      transform: scale(1.05) rotate(-5deg);
+      box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      outline: 0.8rem solid #55c57a;
+      outline-offset: 0.8rem; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95) rotate(5deg); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  transition: all 0.3s; }
+  .feature-box__icon {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block; }
+  .feature-box__text {
+    font-size: 1rem; }
+  .feature-box:hover {
+    transform: translateY(-1rem) scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem; }
+  .header__logo {
+    height: 2.5rem; }
+  .header__main-element {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding-block: 15rem;
+  margin-top: -20vh; }
+
+.section-features {
+  margin-top: -20vh;
+  padding-block: 15rem;
+  padding-inline: 8rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding-block: 15rem;
+  margin-top: -20vh;
+  padding-inline: 8rem; }
