@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
             },
             "<"
         )
-        .from(".btn", {
+        .from("#mainHeaderBtn", {
             y: 50,
             duration: 1,
         });
