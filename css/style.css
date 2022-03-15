@@ -123,6 +123,22 @@ body {
     gap: 5rem;
 }
 
+.bg-video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.15;
+    overflow: hidden;
+}
+.bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -396,7 +412,7 @@ body {
     padding: 5rem 3rem;
     margin: 0 auto;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     transform: skewX(-5deg);
 }
@@ -498,5 +514,5 @@ body {
 
 .section-stories {
     padding-block: 5rem;
-    background-color: #f7f7f7;
+    position: relative;
 }
